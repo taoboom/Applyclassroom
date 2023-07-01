@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tygy.bishe.mapper.RoomuseMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, teacher, class, roomid, apply, weeks, week, section, beforeuse, afteruse
+    </sql>
+    <select id="getManageData" resultType="com.tygy.bishe.dto.RoomuseDto"
+            parameterType="com.tygy.bishe.dto.RoomuseDto">
+        SELECT classroom.address,classroom.roomname,roomuse.* FROM roomuse
+        LEFT JOIN classroom ON classroom.id=roomuse.roomid
+        <where>
+            <if test="address!=null and address!=''">
+                and classroom.address=#{address}
+            </if>
+            <if test="weeks!=null and weeks!=''">
+                and roomuse.weeks=#{weeks}
+            </if>
+            <if test="week!=null and week!=''">
+                and roomuse.week=#{week}
+            </if>
+            <if test="section!=null and section!=''">
+                and roomuse.section=#{section}
+            </if>
+        </where>
+        limit ${(page-1)*pageSize},#{pageSize}
+    </select>
+    <select id="getTotalByCondition" resultType="java.lang.Integer"
+            parameterType="com.tygy.bishe.dto.RoomuseDto">
+        select count(roomuse.id) FROM roomuse
+        LEFT JOIN classroom ON classroom.id=roomuse.roomid
+        <where>
+            <if test="address!=null and address!=''">
+                and classroom.address=#{address}
+            </if>
+            <if test="weeks!=null and weeks!=''">
+                and roomuse.weeks=#{weeks}
+            </if>
+            <if test="week!=null and week!=''">
+                and roomuse.week=#{week}
+            </if>
+            <if test="section!=null and section!=''">
+                and roomuse.section=#{section}
+            </if>
+        </where>
+    </select>
+
+
+</mapper>
