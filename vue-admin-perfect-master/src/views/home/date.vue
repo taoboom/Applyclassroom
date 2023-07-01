@@ -1,0 +1,509 @@
+<template>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <div id="xl" class="table-responsive row" style="">
+                            <table class="table" border="1px" cellpadding="0" cellspacing="0"
+                                   style="float: left;width: 86%">
+                                <thead>
+                                <tr>
+                                    <th>年月</th>
+                                    <th>教学周</th>
+                                    <th>星期一</th>
+                                    <th>星期二</th>
+                                    <th>星期三</th>
+                                    <th>星期四</th>
+                                    <th>星期五</th>
+                                    <th>星期六</th>
+                                    <th>星期日</th>
+                                    <th>备注</th>
+                                </tr>
+                                </thead>
+                                <tbody id="idCalendar">
+                                <tr>
+                                    <td class="tdStyle" rowspan="1">2023-02</td>
+                                    <td class="tdStyle">1</td>
+                                    <td class="tdStyle" title="无备注信息"><a>27</a><span style="color:red;">初八</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>28</a><span style="color:red;">初九</span></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle bg1" title=""></td>
+                                    <td class="tdStyle bg1" title=""></td>
+                                    <td style="white-space: normal;" class="tdStyle" rowspan="1"
+                                        onclick="openWindow(this,'校历月份编辑','/admin/system/zy/xlyf/updateByYf/2022-2023-2/2023-02','800px','500px');"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle" rowspan="5">2023-03</td>
+                                    <td class="tdStyle">1</td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title="无备注信息"><a>1</a><span style="color:red;">初十</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>2</a><span style="color:red;">十一</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>3</a><span style="color:red;">十二</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>4</a><span style="color:red;">十三</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>5</a><span style="color:red;">十四</span>
+                                    </td>
+                                    <td style="white-space: normal;" class="tdStyle" rowspan="5"
+                                        onclick="openWindow(this,'校历月份编辑','/admin/system/zy/xlyf/updateByYf/2022-2023-2/2023-03','800px','500px');"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">2</td>
+                                    <td class="tdStyle" title="无备注信息"><a>6</a><span style="color:red;">惊蛰</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>7</a><span style="color:red;">十六</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>8</a><span style="color:red;">妇女节</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>9</a><span style="color:red;">十八</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>10</a><span style="color:red;">十九</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>11</a><span style="color:red;">二十</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>12</a><span style="color:red;">廿一</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">3</td>
+                                    <td class="tdStyle" title="无备注信息"><a>13</a><span style="color:red;">廿二</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>14</a><span style="color:red;">廿三</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>15</a><span style="color:red;">廿四</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>16</a><span style="color:red;">廿五</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>17</a><span style="color:red;">廿六</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>18</a><span style="color:red;">廿七</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>19</a><span style="color:red;">廿八</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">4</td>
+                                    <td class="tdStyle" title="无备注信息"><a>20</a><span style="color:red;">廿九</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>21</a><span style="color:red;">春分</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>22</a><span style="color:red;">闰二月</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>23</a><span style="color:red;">初二</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>24</a><span style="color:red;">初三</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>25</a><span style="color:red;">初四</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>26</a><span style="color:red;">初五</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">5</td>
+                                    <td class="tdStyle" title="无备注信息"><a>27</a><span style="color:red;">初六</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>28</a><span style="color:red;">初七</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>29</a><span style="color:red;">初八</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>30</a><span style="color:red;">初九</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>31</a><span style="color:red;">初十</span></td>
+                                    <td class="tdStyle bg1" title=""></td>
+                                    <td class="tdStyle bg1" title=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle" rowspan="5">2023-04</td>
+                                    <td class="tdStyle">5</td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>1</a><span style="color:red;">十一</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>2</a><span style="color:red;">十二</span>
+                                    </td>
+                                    <td style="white-space: normal;" class="tdStyle" rowspan="5"
+                                        onclick="openWindow(this,'校历月份编辑','/admin/system/zy/xlyf/updateByYf/2022-2023-2/2023-04','800px','500px');"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">6</td>
+                                    <td class="tdStyle" title="无备注信息"><a>3</a><span style="color:red;">十三</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>4</a><span style="color:red;">十四</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>5</a><span style="color:red;">清明</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>6</a><span style="color:red;">十六</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>7</a><span style="color:red;">十七</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>8</a><span style="color:red;">十八</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>9</a><span style="color:red;">十九</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">7</td>
+                                    <td class="tdStyle" title="无备注信息"><a>10</a><span style="color:red;">二十</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>11</a><span style="color:red;">廿一</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>12</a><span style="color:red;">廿二</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>13</a><span style="color:red;">廿三</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>14</a><span style="color:red;">廿四</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>15</a><span style="color:red;">廿五</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>16</a><span style="color:red;">廿六</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">8</td>
+                                    <td class="tdStyle" title="无备注信息"><a>17</a><span style="color:red;">廿七</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>18</a><span style="color:red;">廿八</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>19</a><span style="color:red;">廿九</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>20</a><span style="color:red;">谷雨</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>21</a><span style="color:red;">初二</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>22</a><span style="color:red;">初三</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>23</a><span style="color:red;">初四</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">9</td>
+                                    <td class="tdStyle" title="无备注信息"><a>24</a><span style="color:red;">初五</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>25</a><span style="color:red;">初六</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>26</a><span style="color:red;">初七</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>27</a><span style="color:red;">初八</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>28</a><span style="color:red;">初九</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>29</a><span style="color:red;">初十</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>30</a><span style="color:red;">十一</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle" rowspan="5">2023-05</td>
+                                    <td class="tdStyle">10</td>
+                                    <td class="tdStyle" title="无备注信息"><a>1</a><span style="color:red;">劳动节</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>2</a><span style="color:red;">十三</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>3</a><span style="color:red;">十四</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>4</a><span style="color:red;">青年节</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>5</a><span style="color:red;">十六</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>6</a><span style="color:red;">立夏</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>7</a><span style="color:red;">十八</span>
+                                    </td>
+                                    <td style="white-space: normal;" class="tdStyle" rowspan="5"
+                                        onclick="openWindow(this,'校历月份编辑','/admin/system/zy/xlyf/updateByYf/2022-2023-2/2023-05','800px','500px');"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">11</td>
+                                    <td class="tdStyle" title="无备注信息"><a>8</a><span style="color:red;">十九</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>9</a><span style="color:red;">二十</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>10</a><span style="color:red;">廿一</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>11</a><span style="color:red;">廿二</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>12</a><span style="color:red;">廿三</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>13</a><span style="color:red;">廿四</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>14</a><span style="color:red;">廿五</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">12</td>
+                                    <td class="tdStyle" title="无备注信息"><a>15</a><span style="color:red;">廿六</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>16</a><span style="color:red;">廿七</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>17</a><span style="color:red;">廿八</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>18</a><span style="color:red;">廿九</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>19</a><span style="color:red;">四月</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>20</a><span style="color:red;">初二</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>21</a><span style="color:red;">小满</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">13</td>
+                                    <td class="tdStyle" title="无备注信息"><a>22</a><span style="color:red;">初四</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>23</a><span style="color:red;">初五</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>24</a><span style="color:red;">初六</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>25</a><span style="color:red;">初七</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>26</a><span style="color:red;">初八</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>27</a><span style="color:red;">初九</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>28</a><span style="color:red;">初十</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">14</td>
+                                    <td class="tdStyle" title="无备注信息"><a>29</a><span style="color:red;">十一</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>30</a><span style="color:red;">十二</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>31</a><span style="color:red;">十三</span></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle bg1" title=""></td>
+                                    <td class="tdStyle bg1" title=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle" rowspan="5">2023-06</td>
+                                    <td class="tdStyle">14</td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title="无备注信息"><a>1</a><span style="color:red;">十四</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>2</a><span style="color:red;">十五</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>3</a><span style="color:red;">十六</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>4</a><span style="color:red;">十七</span>
+                                    </td>
+                                    <td style="white-space: normal;" class="tdStyle" rowspan="5"
+                                        onclick="openWindow(this,'校历月份编辑','/admin/system/zy/xlyf/updateByYf/2022-2023-2/2023-06','800px','500px');"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">15</td>
+                                    <td class="tdStyle" title="无备注信息"><a>5</a><span style="color:red;">十八</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>6</a><span style="color:red;">芒种</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>7</a><span style="color:red;">二十</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>8</a><span style="color:red;">廿一</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>9</a><span style="color:red;">廿二</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>10</a><span style="color:red;">廿三</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>11</a><span style="color:red;">廿四</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">16</td>
+                                    <td class="tdStyle" title="无备注信息"><a>12</a><span style="color:red;">廿五</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>13</a><span style="color:red;">廿六</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>14</a><span style="color:red;">廿七</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>15</a><span style="color:red;">廿八</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>16</a><span style="color:red;">廿九</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>17</a><span style="color:red;">三十</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>18</a><span style="color:red;">五月</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">17</td>
+                                    <td class="tdStyle" title="无备注信息"><a>19</a><span style="color:red;">初二</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>20</a><span style="color:red;">初三</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>21</a><span style="color:red;">夏至</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>22</a><span style="color:red;">初五</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>23</a><span style="color:red;">初六</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>24</a><span style="color:red;">初七</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>25</a><span style="color:red;">初八</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">18</td>
+                                    <td class="tdStyle" title="无备注信息"><a>26</a><span style="color:red;">初九</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>27</a><span style="color:red;">初十</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>28</a><span style="color:red;">十一</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>29</a><span style="color:red;">十二</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>30</a><span style="color:red;">十三</span></td>
+                                    <td class="tdStyle bg1" title=""></td>
+                                    <td class="tdStyle bg1" title=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle" rowspan="2">2023-07</td>
+                                    <td class="tdStyle">18</td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle" title=""></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>1</a><span style="color:red;">建党节</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>2</a><span style="color:red;">十五</span>
+                                    </td>
+                                    <td style="white-space: normal;" class="tdStyle" rowspan="2"
+                                        onclick="openWindow(this,'校历月份编辑','/admin/system/zy/xlyf/updateByYf/2022-2023-2/2023-07','800px','500px');"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tdStyle">19</td>
+                                    <td class="tdStyle" title="无备注信息"><a>3</a><span style="color:red;">十六</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>4</a><span style="color:red;">十七</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>5</a><span style="color:red;">十八</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>6</a><span style="color:red;">十九</span></td>
+                                    <td class="tdStyle" title="无备注信息"><a>7</a><span style="color:red;">小暑</span></td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>8</a><span style="color:red;">廿一</span>
+                                    </td>
+                                    <td class="tdStyle bg1" title="无备注信息"><a>9</a><span style="color:red;">廿二</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <table class="table" border="1px" cellpadding="0" cellspacing="0"
+                                   style="float: left;width: 12%;margin-left: 1px">
+                                <thead>
+                                <tr>
+                                    <th>教学作息时间</th>
+                                </tr>
+                                </thead>
+                                <tbody id="idCalendar1">
+                                <tr>
+                                    <td class="tdStyle">第1节：8:00 - 8:50</td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="tdStyle">第2节：9:00 - 9:50</td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="tdStyle">第3节：10:10 - 11:00</td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="tdStyle">第4节：11:10 - 12:00</td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="tdStyle">第5节：14:00 - 14:50</td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="tdStyle">第6节：15:00 - 15:50</td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="tdStyle">第7节：16:10 - 17:00</td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="tdStyle">第8节：17:10 - 18:00</td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="tdStyle">第9节：19:00 - 19:50</td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="tdStyle">第10节：20:00 - 20:50</td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="tdStyle"></td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="tdStyle"></td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="tdStyle"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: ""
+    }
+</script>
+
+<style scoped>
+    td {
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
+    .tdStyle {
+        width: 100px;
+        word-wrap: break-word;
+    }
+
+    #selectXnxqh {
+        width: 100% !important;
+        margin-bottom: 5%;
+    }
+
+    .table > thead > tr > th, .table tr td {
+        text-align: center;
+    }
+
+    .table > thead > tr > th:nth-child(1) {
+        width: 80px;
+    }
+
+    .table > thead > tr > th:nth-child(2) {
+        width: 60px;
+    }
+
+    /*.table > thead > tr > th:last-child{ width:200px;}*/
+    .table > tbody#idCalendar1 > tr {
+        height: 39px
+    }
+
+    .table tr td.bg1, .table > thead > tr > th {
+        background: #f7f7f7;
+    }
+
+    .table tr td.bg1 a span {
+        background: #f7f7f7;
+    }
+
+    .tdStyle a {
+        display: block;
+        width: 100%;
+        line-height: 18px;
+        padding: 2px 0;
+    }
+
+    .tdStyle p {
+        margin: 0 5px;
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .dcxl {
+        width: auto;
+        padding: 0 15px 0 0;
+    }
+
+    .float-e-margins .dcxl .btn {
+        height: 32px;
+        margin-top: 1px;
+    }
+
+    .dropload-up, .dropload-down {
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        font-size: 12px;
+        /* 开启硬件加速 */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    .dropload-down {
+        height: 50px;
+    }
+
+    .dropload-refresh, .dropload-update, .dropload-load, .dropload-noData {
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .dropload-load .loading {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        border-radius: 100%;
+        margin: 6px;
+        border: 2px solid #666;
+        border-bottom-color: transparent;
+        vertical-align: middle;
+        -webkit-animation: rotate 0.75s linear infinite;
+        animation: rotate 0.75s linear infinite;
+    }
+
+    @-webkit-keyframes rotate {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        50% {
+            -webkit-transform: rotate(180deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
